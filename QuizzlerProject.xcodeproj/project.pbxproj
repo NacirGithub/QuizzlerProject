@@ -15,6 +15,7 @@
 		FEFE6DAA24013F71001B0E4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEFE6DA824013F71001B0E4E /* LaunchScreen.storyboard */; };
 		FEFE6DB524013F72001B0E4E /* QuizzlerProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE6DB424013F72001B0E4E /* QuizzlerProjectTests.swift */; };
 		FEFE6DC024013F72001B0E4E /* QuizzlerProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE6DBF24013F72001B0E4E /* QuizzlerProjectUITests.swift */; };
+		FEFE6DD22401478F001B0E4E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE6DD12401478F001B0E4E /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		FEFE6DBB24013F72001B0E4E /* QuizzlerProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizzlerProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEFE6DBF24013F72001B0E4E /* QuizzlerProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzlerProjectUITests.swift; sourceTree = "<group>"; };
 		FEFE6DC124013F72001B0E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEFE6DCD24014015001B0E4E /* QuizzlerProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuizzlerProject.entitlements; sourceTree = "<group>"; };
+		FEFE6DD12401478F001B0E4E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +102,11 @@
 		FEFE6D9C24013F6B001B0E4E /* QuizzlerProject */ = {
 			isa = PBXGroup;
 			children = (
-				FEFE6D9D24013F6B001B0E4E /* AppDelegate.swift */,
+				FEFE6DD024014775001B0E4E /* Controller */,
+				FEFE6DCF24014765001B0E4E /* Model */,
+				FEFE6DCE2401474A001B0E4E /* View */,
+				FEFE6DCD24014015001B0E4E /* QuizzlerProject.entitlements */,
 				FEFE6D9F24013F6B001B0E4E /* SceneDelegate.swift */,
-				FEFE6DA124013F6B001B0E4E /* ViewController.swift */,
-				FEFE6DA324013F6B001B0E4E /* Main.storyboard */,
-				FEFE6DA624013F71001B0E4E /* Assets.xcassets */,
 				FEFE6DA824013F71001B0E4E /* LaunchScreen.storyboard */,
 				FEFE6DAB24013F71001B0E4E /* Info.plist */,
 			);
@@ -126,6 +129,32 @@
 				FEFE6DC124013F72001B0E4E /* Info.plist */,
 			);
 			path = QuizzlerProjectUITests;
+			sourceTree = "<group>";
+		};
+		FEFE6DCE2401474A001B0E4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FEFE6DA624013F71001B0E4E /* Assets.xcassets */,
+				FEFE6DA324013F6B001B0E4E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEFE6DCF24014765001B0E4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FEFE6DD12401478F001B0E4E /* Question.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FEFE6DD024014775001B0E4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FEFE6D9D24013F6B001B0E4E /* AppDelegate.swift */,
+				FEFE6DA124013F6B001B0E4E /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEFE6DA224013F6B001B0E4E /* ViewController.swift in Sources */,
+				FEFE6DD22401478F001B0E4E /* Question.swift in Sources */,
 				FEFE6D9E24013F6B001B0E4E /* AppDelegate.swift in Sources */,
 				FEFE6DA024013F6B001B0E4E /* SceneDelegate.swift in Sources */,
 			);
@@ -434,7 +464,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QuizzlerProject/QuizzlerProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 7U65R8QA2S;
 				INFOPLIST_FILE = QuizzlerProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -443,6 +475,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.devprime.QuizzlerProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,7 +485,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QuizzlerProject/QuizzlerProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 7U65R8QA2S;
 				INFOPLIST_FILE = QuizzlerProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -461,6 +496,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.devprime.QuizzlerProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
